@@ -1,0 +1,13 @@
+@import "/node_modules/bootstrap/scss/bootstrap-utilities";
+nav {
+    .navbar-brand {
+        img {
+            @include media-breakpoint-down(md) {
+                height: 40px;
+            }
+            @include media-breakpoint-down(sm) {
+                height: 35px;
+            }
+        }
+    }
+}
