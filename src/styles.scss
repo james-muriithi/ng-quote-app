@@ -1,8 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Poppins&display=swap");
 @import "variables";
-@import '../node_modules/bootstrap/scss/bootstrap';
+@import "../node_modules/bootstrap/scss/bootstrap";
 * {
     font-family: $main-font;
 }
@@ -10,6 +10,15 @@
 body,
 html {
     height: 100%;
+}
+
+.btn {
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none !important;
+        box-shadow: none !important;
+    }
 }
 
 .btn-primary {
