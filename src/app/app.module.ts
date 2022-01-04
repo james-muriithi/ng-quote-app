@@ -7,6 +7,7 @@ import { BannerComponent } from './banner/banner.component';
 import { QuotesSectionComponent } from './quotes-section/quotes-section.component';
 import { QuoteComponent } from './quote/quote.component';
 import { TimeElapsedPipe } from './time-elapsed.pipe';
+import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { TimeElapsedPipe } from './time-elapsed.pipe';
     BannerComponent,
     QuotesSectionComponent,
     QuoteComponent,
-    TimeElapsedPipe
+    TimeElapsedPipe,
+    QuoteDetailsComponent
   ],
   imports: [
     BrowserModule

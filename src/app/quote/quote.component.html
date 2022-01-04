@@ -1,4 +1,4 @@
-<div class="quote shadow px-3 py-5">
+<div class="quote shadow px-3 pt-5 pb-2">
     <div class="quote-upper">
         <div class="quotation-mark"> “ </div>
         <div class="quote-text">
@@ -16,6 +16,8 @@
                 by {{quote.createdBy}}
             </div>
         </div>
-
+        <div class="">
+            <app-quote-details [quote]="quote"></app-quote-details>
+        </div>
     </div>
 </div>

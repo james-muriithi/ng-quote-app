@@ -1,0 +1,22 @@
+<div class="quote-details mt-3">
+    <div class="row" *ngIf="detailsOpen">
+        <div class="col-7">
+            <button class="like btn">
+      <i class="fa fa-thumbs-up"></i> {{ quote.likes }}
+    </button>
+            <button class="dislike btn">
+      <i class="fa fa-thumbs-down"></i> {{ quote.dislikes }}
+    </button>
+        </div>
+        <div class="col-5 text-end">
+            <button class="dislike btn">
+      <i class="fa fa-trash text-primary"></i>
+    </button>
+        </div>
+    </div>
+    <div class="">
+        <button class="btn w-100" (click)="toggleDetails()">
+            <i [ngClass]="['fa fs-1', detailsOpen ? 'fa-angle-up' : 'fa-angle-down']"></i>
+        </button>
+    </div>
+</div>
