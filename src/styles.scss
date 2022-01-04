@@ -1,11 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Poppins&display=swap');
+@import "variables";
+@import '../node_modules/bootstrap/scss/bootstrap';
 * {
-    font-family: Poppins, serif;
+    font-family: $main-font;
 }
 
 body,
 html {
     height: 100%;
+}
+
+.btn-primary {
+    @include button-variant( map-get($theme-colors, primary),
+    darken(map-get($theme-colors, primary), 7.5%),
+    $white);
 }
