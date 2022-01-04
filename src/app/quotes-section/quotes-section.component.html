@@ -1,6 +1,6 @@
 <section id="quotes-section" class="py-5 container-fluid">
     <h1 class="section-title text-center pb-4">Quotes</h1>
     <div class="row px-2 px-xl-3">
-        <app-quote *ngFor="let quote of quotes" [quote]="quote" class="col-sm-6 col-lg-4 col-xl-3 mb-4"></app-quote>
+        <app-quote *ngFor="let quote of quotes" [quote]="quote" (deleteQuoteEvent)="deleteQuote($event)" class="col-sm-6 col-lg-4 col-xl-3 mb-4"></app-quote>
     </div>
 </section>

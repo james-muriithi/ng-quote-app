@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="">
-            <app-quote-details [quote]="quote"></app-quote-details>
+            <app-quote-details (deleteQuoteEvent)="deleteQuote()" [quote]="quote"></app-quote-details>
         </div>
     </div>
 </div>

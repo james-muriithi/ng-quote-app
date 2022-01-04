@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Quote } from 'src/shared/quote.model';
 
 @Component({
@@ -8,6 +8,8 @@ import { Quote } from 'src/shared/quote.model';
 })
 export class QuoteDetailsComponent implements OnInit {
   @Input() quote: Quote;
+
+  @Output() deleteQuoteEvent = new EventEmitter();
 
   detailsOpen: Boolean = false;
 
@@ -26,5 +28,9 @@ export class QuoteDetailsComponent implements OnInit {
 
   dislikeQuote() {
     this.quote.dislikes++;
+  }
+
+  deleteQuote(){
+    this.deleteQuoteEvent.emit();
   }
 }
