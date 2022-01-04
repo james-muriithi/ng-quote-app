@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Quote } from '../../shared/quote.model';
+import {Modal} from 'bootstrap';
 
 @Component({
   selector: 'app-banner',
@@ -7,6 +8,8 @@ import { Quote } from '../../shared/quote.model';
   styleUrls: ['./banner.component.scss'],
 })
 export class BannerComponent implements OnInit {
+  @ViewChild('addQuoteModalElement') addQuoteModalElement : ElementRef;
+
   constructor() {}
 
   defaultQuote: Quote = new Quote(
@@ -16,7 +19,15 @@ export class BannerComponent implements OnInit {
     new Date()
   );
 
+  addQuoteModal: any;
+
   ngOnInit(): void {
-    console.log(this.defaultQuote);
+    // this.addQuoteModal = new Modal(this.addQuoteModalElement.nativeElement, {});
+  }
+  ngAfterViewInit():void{
+    console.log(this.addQuoteModalElement);
+    this.addQuoteModal = new Modal(this.addQuoteModalElement.nativeElement, {});
+    this.addQuoteModal.show();
+    
   }
 }
