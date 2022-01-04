@@ -1,6 +1,5 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Quote } from '../../shared/quote.model';
-import {Modal} from 'bootstrap';
 
 @Component({
   selector: 'app-banner',
@@ -8,8 +7,7 @@ import {Modal} from 'bootstrap';
   styleUrls: ['./banner.component.scss'],
 })
 export class BannerComponent implements OnInit {
-  @ViewChild('addQuoteModalElement') addQuoteModalElement : ElementRef;
-
+  @Output() addNewQuoteEvent = new EventEmitter<Quote>();
   constructor() {}
 
   defaultQuote: Quote = new Quote(
@@ -19,15 +17,10 @@ export class BannerComponent implements OnInit {
     new Date()
   );
 
-  addQuoteModal: any;
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-    // this.addQuoteModal = new Modal(this.addQuoteModalElement.nativeElement, {});
-  }
-  ngAfterViewInit():void{
-    console.log(this.addQuoteModalElement);
-    this.addQuoteModal = new Modal(this.addQuoteModalElement.nativeElement, {});
-    this.addQuoteModal.show();
+  addNewQuote(quote: Quote) {
+    this.addNewQuoteEvent.emit(quote);
     
   }
 }

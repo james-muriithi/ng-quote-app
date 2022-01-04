@@ -8,6 +8,8 @@ import { QuotesSectionComponent } from './quotes-section/quotes-section.componen
 import { QuoteComponent } from './quote/quote.component';
 import { TimeElapsedPipe } from './time-elapsed.pipe';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
+import { AddQuoteModalComponent } from './add-quote-modal/add-quote-modal.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,10 +19,12 @@ import { QuoteDetailsComponent } from './quote-details/quote-details.component';
     QuotesSectionComponent,
     QuoteComponent,
     TimeElapsedPipe,
-    QuoteDetailsComponent
+    QuoteDetailsComponent,
+    AddQuoteModalComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
