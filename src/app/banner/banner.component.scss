@@ -1,7 +1,15 @@
+@import "variables";
 #banner {
     background-image: url('/assets/banner.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    color: #fff;
+    color: $white;
+    * {
+        font-family: 'Oleo Script Swash Caps', serif;
+    }
+    .quotation-mark {
+        font-size: 80px;
+        color: $primary;
+    }
 }
