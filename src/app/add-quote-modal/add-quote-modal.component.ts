@@ -1,4 +1,11 @@
-import { Component, OnInit, ViewChild, ElementRef, Output, EventEmitter } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  ElementRef,
+  Output,
+  EventEmitter,
+} from '@angular/core';
 import { Modal } from 'bootstrap';
 import { Quote } from 'src/shared/quote.model';
 
@@ -38,6 +45,7 @@ export class AddQuoteModalComponent implements OnInit {
       this.addNewQuoteEvent.emit(quote);
       this.author = this.quote = this.createdBy = '';
       this.addQuoteModal.hide();
+      this.scrollTo('#quotes-section');
     } else {
       alert('Please fill all the details');
     }
@@ -45,5 +53,11 @@ export class AddQuoteModalComponent implements OnInit {
 
   validateForm() {
     return this.author && this.quote && this.createdBy;
+  }
+
+  scrollTo(ref: string): void {
+    const elementList = document.querySelectorAll(ref);
+    const element = elementList[0] as HTMLElement;
+    element.scrollIntoView({ behavior: 'smooth' });
   }
 }
