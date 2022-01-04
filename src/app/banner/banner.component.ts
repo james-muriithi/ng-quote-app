@@ -10,11 +10,12 @@ export class BannerComponent implements OnInit {
   constructor() {}
 
   defaultQuote: Quote = new Quote(
-    Quote.generateRandomId(),
     'Kobe',
     'The moment you give up, is the moment you let someone else win',
     new Date()
   );
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.defaultQuote);
+  }
 }

@@ -1,14 +1,14 @@
 export class Quote {
   constructor(
-    public id: any,
     public author: string,
     public quote: string,
     public createdAt: Date,
     public likes: number = 0,
-    public dislikes: number = 0
+    public dislikes: number = 0,
+    public id: string = Quote.generateRandomId()
   ) {}
 
   static generateRandomId() {
-    return Math.floor(Math.random() * 100);
+    return Math.random().toString(16).slice(2);
   }
 }
