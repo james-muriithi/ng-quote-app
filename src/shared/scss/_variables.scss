@@ -1,5 +1,10 @@
+// colors
 $primary: #E1651F;
 $white: #fff;
+// theme mixin
+$theme-colors: ( "primary": $primary);
+// font families
 $main-font: Poppins,
 serif;
-$theme-colors: ( "primary": $primary);
+$quote-font: 'Oleo Script Swash Caps',
+serif;

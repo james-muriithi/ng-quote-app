@@ -7,15 +7,19 @@
     background-position: center center;
     color: $white;
     * {
-        font-family: 'Oleo Script Swash Caps', serif;
+        font-family: $quote-font;
     }
     .quotation-mark {
         font-size: 80px;
         color: $primary;
+        line-height: 90px;
         @include media-breakpoint-down(md) {
             line-height: 80px;
             color: $white;
         }
+    }
+    .author {
+        font-size: 25px;
     }
     .default-quote {
         font-size: 50px;
