@@ -11,7 +11,7 @@ export class QuoteComponent implements OnInit {
     'Kobe',
     'The moment you give up, is the moment you let someone else win',
     "James Muriithi",
-    new Date()
+    new Date("2021-12-29T18:03:00")
   );
 
   constructor() {}

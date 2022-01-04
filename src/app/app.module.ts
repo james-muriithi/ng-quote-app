@@ -6,6 +6,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { BannerComponent } from './banner/banner.component';
 import { QuotesSectionComponent } from './quotes-section/quotes-section.component';
 import { QuoteComponent } from './quote/quote.component';
+import { TimeElapsedPipe } from './time-elapsed.pipe';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { QuoteComponent } from './quote/quote.component';
     NavBarComponent,
     BannerComponent,
     QuotesSectionComponent,
-    QuoteComponent
+    QuoteComponent,
+    TimeElapsedPipe
   ],
   imports: [
     BrowserModule
