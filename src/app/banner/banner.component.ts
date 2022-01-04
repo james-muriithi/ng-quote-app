@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Quote } from '../shared/quote.model';
 
 @Component({
   selector: 'app-banner',
@@ -8,10 +9,12 @@ import { Component, OnInit } from '@angular/core';
 export class BannerComponent implements OnInit {
   constructor() {}
 
-  defaultQuote = {
-    author: 'Kobe',
-    quote: 'The moment you give up, is the moment you let someone else win',
-  };
+  defaultQuote: Quote = new Quote(
+    Quote.generateRandomId(),
+    'Kobe',
+    'The moment you give up, is the moment you let someone else win',
+    new Date()
+  );
 
   ngOnInit(): void {}
 }
