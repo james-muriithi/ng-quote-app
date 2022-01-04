@@ -41,7 +41,6 @@ export class AddQuoteModalComponent implements OnInit {
   }
 
   ngOnChanges(){
-    console.log(this.open);
     if (this.open) {
       this.openModal();
     }
