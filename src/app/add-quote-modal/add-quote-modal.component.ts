@@ -5,6 +5,7 @@ import {
   ElementRef,
   Output,
   EventEmitter,
+  Input,
 } from '@angular/core';
 import { Modal } from 'bootstrap';
 import { Quote } from 'src/shared/quote.model';
@@ -23,6 +24,9 @@ export class AddQuoteModalComponent implements OnInit {
 
   addQuoteModal: any;
   @Output() addNewQuoteEvent = new EventEmitter<Quote>();
+  @Output() modalClosed = new EventEmitter();
+
+  @Input() open: Boolean = false;
 
   constructor() {}
 
@@ -30,6 +34,24 @@ export class AddQuoteModalComponent implements OnInit {
 
   ngAfterViewInit(): void {
     this.addQuoteModal = new Modal(this.addQuoteModalElement.nativeElement, {});
+    this.addQuoteModalElement.nativeElement.addEventListener('hidden.bs.modal', () => {
+      this.modalClosed.emit();
+    })
+
+  }
+
+  ngOnChanges(){
+    console.log(this.open);
+    if (this.open) {
+      this.openModal();
+    }
+  }
+
+  // ngOnDestroy(){
+  //   this.addQuoteModalElement.nativeElement.removeEventListener('hidden.bs.modal');
+  // }
+
+  openModal() {
     this.addQuoteModal.show();
   }
 

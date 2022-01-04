@@ -8,6 +8,8 @@ import { Quote } from '../../shared/quote.model';
 })
 export class BannerComponent implements OnInit {
   @Output() addNewQuoteEvent = new EventEmitter<Quote>();
+  openModal: Boolean = false;
+
   constructor() {}
 
   defaultQuote: Quote = new Quote(
@@ -21,6 +23,5 @@ export class BannerComponent implements OnInit {
 
   addNewQuote(quote: Quote) {
     this.addNewQuoteEvent.emit(quote);
-    
   }
 }
