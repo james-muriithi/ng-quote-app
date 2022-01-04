@@ -1,3 +1,4 @@
+@import "/node_modules/bootstrap/scss/bootstrap-utilities";
 @import "variables";
 #banner {
     background-image: url('/assets/banner.png');
@@ -11,8 +12,14 @@
     .quotation-mark {
         font-size: 80px;
         color: $primary;
+        @include media-breakpoint-down(md) {
+            line-height: 80px;
+        }
     }
     .default-quote {
         font-size: 50px;
+        @include media-breakpoint-down(md) {
+            font-size: 45px;
+        }
     }
 }
