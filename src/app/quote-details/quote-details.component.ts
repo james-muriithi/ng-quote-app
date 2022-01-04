@@ -18,4 +18,13 @@ export class QuoteDetailsComponent implements OnInit {
   toggleDetails() {
     this.detailsOpen = !this.detailsOpen;
   }
+
+  likeQuote() {
+    this.quote.likes++;
+    
+  }
+
+  dislikeQuote() {
+    this.quote.dislikes++;
+  }
 }

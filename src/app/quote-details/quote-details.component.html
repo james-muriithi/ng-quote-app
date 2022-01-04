@@ -1,15 +1,15 @@
 <div class="quote-details mt-3">
     <div class="row" *ngIf="detailsOpen">
         <div class="col-7">
-            <button class="like btn">
+            <button class="like btn" (click)="likeQuote()">
       <i class="fa fa-thumbs-up"></i> {{ quote.likes }}
     </button>
-            <button class="dislike btn">
+            <button class="dislike btn" (click)="dislikeQuote()">
       <i class="fa fa-thumbs-down"></i> {{ quote.dislikes }}
     </button>
         </div>
         <div class="col-5 text-end">
-            <button class="dislike btn">
+            <button class="delete btn">
       <i class="fa fa-trash text-primary"></i>
     </button>
         </div>
