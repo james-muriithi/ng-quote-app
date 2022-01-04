@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Quote } from '../shared/quote.model';
+import { Quote } from '../../shared/quote.model';
 
 @Component({
   selector: 'app-banner',
@@ -12,6 +12,7 @@ export class BannerComponent implements OnInit {
   defaultQuote: Quote = new Quote(
     'Kobe',
     'The moment you give up, is the moment you let someone else win',
+    'James Muriithi',
     new Date()
   );
 

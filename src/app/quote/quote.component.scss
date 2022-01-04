@@ -1,0 +1,16 @@
+@import "variables";
+@import "/node_modules/bootstrap/scss/bootstrap-utilities";
+.quote {
+    background: $white;
+    .quotation-mark {
+        font-family: $quote-font;
+        color: $primary;
+        font-size: 70px;
+        line-height: 20px;
+        margin-top: $spacer;
+    }
+    .quote-text span {
+        font-family: $quote-font;
+        font-size: 23px;
+    }
+}

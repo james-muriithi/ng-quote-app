@@ -1,1 +1,20 @@
-<p>quote works!</p>
+<div class="quote shadow p-3">
+    <div class="quote-upper">
+        <div class="quotation-mark"> “ </div>
+        <div class="quote-text">
+            <span class="">
+                {{quote.quote}} 
+                - 
+                <span class="author text-primary">{{quote.author}}</span>
+            </span>
+        </div>
+        <div class="info row">
+            <div class="col-6">
+                {{quote.createdAt}}
+            </div>
+            <div class="col-6">
+                by
+            </div>
+        </div>
+    </div>
+</div>
