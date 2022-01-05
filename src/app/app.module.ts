@@ -10,6 +10,7 @@ import { TimeElapsedPipe } from './time-elapsed.pipe';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { AddQuoteModalComponent } from './add-quote-modal/add-quote-modal.component';
 import { FormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     QuoteComponent,
     TimeElapsedPipe,
     QuoteDetailsComponent,
-    AddQuoteModalComponent
+    AddQuoteModalComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

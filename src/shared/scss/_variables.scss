@@ -2,6 +2,8 @@
 $primary: #E1651F;
 $white: #fff;
 $bg-color: #E5E5E5;
+$black: #000;
+$footer-bg: $black;
 // theme mixin
 $theme-colors: ( "primary": $primary);
 // font families
@@ -9,3 +11,5 @@ $main-font: Poppins,
 serif;
 $quote-font: 'Oleo Script Swash Caps',
 serif;
+// size vaiables
+$spacer: 1rem;
