@@ -1,5 +1,4 @@
 @import "variables";
-@import "/node_modules/bootstrap/scss/bootstrap-utilities";
 .quote {
     background: $white;
     .quotation-mark {
@@ -15,5 +14,8 @@
     }
     .info {
         font-size: 14px;
+    }
+    .highlight {
+        font-size: calc($spacer * 0.8);
     }
 }

@@ -11,6 +11,7 @@ import { QuoteDetailsComponent } from './quote-details/quote-details.component';
 import { AddQuoteModalComponent } from './add-quote-modal/add-quote-modal.component';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
+import { HighlightQuoteDirective } from './directives/highlight-quote.directive';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FooterComponent } from './footer/footer.component';
     TimeElapsedPipe,
     QuoteDetailsComponent,
     AddQuoteModalComponent,
-    FooterComponent
+    FooterComponent,
+    HighlightQuoteDirective
   ],
   imports: [
     BrowserModule,

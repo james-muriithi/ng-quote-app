@@ -6,6 +6,6 @@
         </div>
     </div>
     <div class="row px-2 px-xl-3">
-        <app-quote *ngFor="let quote of quotes" [quote]="quote" (deleteQuoteEvent)="deleteQuote($event)" class="col-sm-6 col-lg-4 col-xl-3 mb-4"></app-quote>
+        <app-quote *ngFor="let quote of quotes" [quote]="quote" [appHighlightQuote]="highlightQuote(quote.id)" (deleteQuoteEvent)="deleteQuote($event)" class="col-sm-6 col-lg-4 col-xl-3 mb-4"></app-quote>
     </div>
 </section>
