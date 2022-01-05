@@ -8,7 +8,7 @@ import { Quote } from '../../shared/quote.model';
 })
 export class BannerComponent implements OnInit {
   @Output() addNewQuoteEvent = new EventEmitter<Quote>();
-  openModal: Boolean = false;
+  @Output() openModalEvent = new EventEmitter();
 
   constructor() {}
 

@@ -15,7 +15,7 @@
                         <span class="author">{{defaultQuote.author}}</span>
                     </div>
                     <div class="mt-5 text-lg-end me-5">
-                        <button class="btn-primary btn px-4" (click)="openModal = true">
+                        <button class="btn-primary btn px-4" (click)="openModalEvent.emit()">
                             Create Quote
                         </button>
                     </div>
@@ -24,5 +24,3 @@
         </div>
     </div>
 </div>
-
-<app-add-quote-modal (modalClosed)="openModal=false" [open]="openModal" (addNewQuoteEvent)="addNewQuote($event)"></app-add-quote-modal>

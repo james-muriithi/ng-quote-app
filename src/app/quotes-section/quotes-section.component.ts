@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Quote } from 'src/shared/quote.model';
 
 @Component({
@@ -8,6 +8,8 @@ import { Quote } from 'src/shared/quote.model';
 })
 export class QuotesSectionComponent implements OnInit {
   @Input() quotes: Quote[];
+
+  @Output() openModalEvent = new EventEmitter();
 
   constructor() {}
 

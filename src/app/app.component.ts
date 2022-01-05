@@ -8,6 +8,9 @@ import { Quote } from 'src/shared/quote.model';
 })
 export class AppComponent {
   title = 'angular-quotes';
+
+  openModal: Boolean = false;
+
   quotes = [
     new Quote(
       'Kobe',
