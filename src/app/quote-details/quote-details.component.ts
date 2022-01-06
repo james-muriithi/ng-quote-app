@@ -7,7 +7,7 @@ import { Quote } from 'src/shared/quote.model';
   styleUrls: ['./quote-details.component.scss'],
 })
 export class QuoteDetailsComponent implements OnInit {
-  @Input() quote: Quote;
+  @Input() quote!: Quote;
 
   @Output() deleteQuoteEvent = new EventEmitter();
 

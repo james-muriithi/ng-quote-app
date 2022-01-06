@@ -16,11 +16,11 @@ import { Quote } from 'src/shared/quote.model';
   styleUrls: ['./add-quote-modal.component.scss'],
 })
 export class AddQuoteModalComponent implements OnInit {
-  @ViewChild('addQuoteModalElement') addQuoteModalElement: ElementRef;
+  @ViewChild('addQuoteModalElement') addQuoteModalElement!: ElementRef;
 
-  author: string;
-  quote: string;
-  createdBy: string;
+  author!: string;
+  quote!: string;
+  createdBy!: string;
 
   addQuoteModal: any;
   @Output() addNewQuoteEvent = new EventEmitter<Quote>();

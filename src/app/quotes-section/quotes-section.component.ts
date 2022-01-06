@@ -7,17 +7,18 @@ import { Quote } from 'src/shared/quote.model';
   styleUrls: ['./quotes-section.component.scss'],
 })
 export class QuotesSectionComponent implements OnInit {
-  @Input() quotes: Quote[];
+  @Input() quotes!: Quote[];
+
 
   @Output() openModalEvent = new EventEmitter();
 
-  quotewithMostUpvotes: Quote;
+  quotewithMostUpvotes!: Quote;
 
   constructor() {}
 
   ngOnInit(): void {
     this.quotewithMostUpvotes = this.quotes.reduce((max, quote) =>
-      max.likes > quote.likes ? max : quote
+      max.likes >= quote.likes ? max : quote
     );
   }
 
